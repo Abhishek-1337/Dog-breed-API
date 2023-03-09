@@ -1,0 +1,43 @@
+.dropdown{
+    position: relative;
+    top: -0.45rem;
+}
+
+.dropdown > button{
+    
+    background-color: transparent;
+    border-radius: 7px;
+    font-size: 1rem;
+    border:1px solid wheat;
+    padding: 0.2rem 1.1rem;
+    will-change: filter;
+    filter: drop-shadow(0px 0px 15px white);
+}
+
+.dropdown-menu{
+    position: absolute;
+    left: -150%;
+    top: 2.35rem;
+    width:23rem;
+    /* display: flex;
+    flex-direction: column; */
+    background-color: white;
+    border-radius: 7px;
+    opacity: 0; 
+    pointer-events: none;
+}
+
+.dropdown-menu > div{
+    text-align: center;
+    padding: 0.25rem;
+}
+
+.dropdown-menu > div:hover{
+    background-color: gray;
+    color:white;
+}
+
+.active{
+    opacity: 1;
+    pointer-events: auto;
+}
