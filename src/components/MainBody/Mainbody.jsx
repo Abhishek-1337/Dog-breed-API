@@ -8,6 +8,8 @@ export default function Mainbody() {
     const [isLoading, setIsLoading] = useState(false);
     const [ddata, setDdata] = useState([]);
     const [arrData, setArrData] = useState([]);
+    const [mainBodyFlag, setMainBodyFlag] = useState(false);
+
     let newData = [];
     const options = {
         method: 'GET',
@@ -18,7 +20,9 @@ export default function Mainbody() {
         }
       };
       
-      
+      const clickHandler = () => {
+
+      }
     //   const data = axios.request(options)
     useEffect(()=>{
         axios.request(options).then(function (response) {
@@ -47,7 +51,8 @@ export default function Mainbody() {
             <div className={styles.main}>
                 <h1 className={styles['header-title']}>Dog breeds</h1>
                 <Dropdown data={ddata}/>
-                { isLoading && <BreedList data={arrData}/> }
+                { mainBodyFlag && isLoading && <BreedList data={arrData}/> }
+                <div>Hello</div>
                 { !isLoading && <p>Loading...</p>}
             </div>
         </main>
